@@ -1,0 +1,22 @@
+#!/bin/sh
+
+read -p "Competely remove MySQL? " yn
+
+case "$yn" in
+	y | Y)
+	echo "Removing mysql competely";
+	rm /usr/local/mysql;
+	rm ~/.mysql_history;
+	rm -rf /usr/local/mysql*;
+	rm -rf /var/lib/mysql;
+	rm -rf /var/mysql;
+	rm -rf /Library/StartupItems/MySQLCOM;
+	rm -rf /Library/PreferencePanes/My*;
+	rm -rf /Library/Receipts/mysql*;
+	rm -rf /Library/Receipts/MySQL*;
+	rm -rf /var/db/receipts/com.mysql.*;
+	;;
+	n | N)	
+	exit
+	;;
+	esac
