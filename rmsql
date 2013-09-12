@@ -1,6 +1,6 @@
 #!/bin/sh
 
-read -p "Competely remove MySQL? " yn
+read -p "Competely remove MySQL? y/n" yn
 
 case "$yn" in
 	y | Y)
